@@ -214,7 +214,7 @@ class TestSDL2ExtRenderer(object):
         renderer.copy(tx)
         renderer.present()
         assert view[0][0] == 0
-        assert view[-1][-1] == 0
+        assert view[127][127] == 0
 
         # Test copying a Texture with only location argument
         renderer.clear(0xAABBCC) # reset surface
