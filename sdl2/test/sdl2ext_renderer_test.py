@@ -209,6 +209,7 @@ class TestSDL2ExtRenderer(object):
 
         # Test copying a Texture without any arguments (should fill surface)
         sf = SDL_CreateRGBSurface(0, 16, 16, 32, 0, 0, 0, 0)
+        sdl2ext.fill(sf, (0, 0, 0, 0))
         tx = sdl2ext.Texture(renderer, sf)
         renderer.copy(tx)
         renderer.present()
